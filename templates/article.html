@@ -3,10 +3,8 @@
 {% block header %}
     <nav>
         <a href="" class="brand">
-            <img src="{{ url_for('static', path='svg/uncc-white.svg') }}"
-                 alt="UNCC">
-            <img src="{{ url_for('static', path='svg/acm-white.svg') }}"
-                 alt="ACM">
+            <i class="logo logo-acm-white"></i>
+            <span>UNCC ACM</span>
         </a>
 
         <span class="spacer"></span>
@@ -18,9 +16,7 @@
 {% endblock %}
 
 {% block body %}
-    <img src="{{ url_for('static', path='svg/acm-color.svg') }}"
-         alt="UNCC ACM"
-         class="logo">
+    <i class="logo logo-acm-color logo-xl float-right"></i>
 
     {% block article %}
     {% endblock %}
@@ -28,14 +24,18 @@
 
 {% block footer %}
     <section>
-        <h2>Related Pages</h2>
-        <a href="https://www.acm.org/">Association for Computing Machinery</a>
+        <h3>Useful Sites</h3>
         <a href="https://open.kattis.com/">Kattis</a>
         <a href="https://icpc.baylor.edu/">ICPC</a>
         <a href="https://codingcompetitions.withgoogle.com/codejam">Google Code Jam</a>
     </section>
 
-    <section>
-        <h2>Contact Us</h2>
+    <div class="spacer"></div>
+
+    <section class="text-right">
+        <h3>Parent Organizations</h3>
+        <a href="https://www.uncc.edu/">University of North Carolina at Charlotte</a>
+        <a href="https://cci.uncc.edu/">College of Computing and Informatics</a>
+        <a href="https://www.acm.org/">Association for Computing Machinery</a>
     </section>
 {% endblock %}

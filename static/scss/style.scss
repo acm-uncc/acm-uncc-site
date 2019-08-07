@@ -46,11 +46,6 @@ body {
   opacity: .5;
 }
 
-.logo {
-  height: 10rem;
-  float: right;
-}
-
 header, footer {
   @include elevate;
 
@@ -108,14 +103,13 @@ footer {
     section {
       display: flex;
       flex-direction: column;
-      margin-right: 2rem;
+      margin: 0 .5rem;
 
       * {
         padding: 0 .5rem;
       }
 
       h1, h2, h3 {
-        width: 100%;
         border-bottom: 1px solid white;
         margin-bottom: .5rem;
       }
@@ -124,10 +118,10 @@ footer {
         opacity: .7;
         color: $white;
         text-decoration: none;
+        margin-bottom: .1em;
       }
 
       a:hover {
-        text-decoration: underline;
         color: $white;
         opacity: 1;
       }
@@ -278,7 +272,6 @@ pre {
 
     &:hover {
       background-color: #0002;
-      text-decoration: underline;
     }
   }
 
@@ -291,8 +284,79 @@ pre {
   }
 }
 
-.uncc-icon {
-  height: 5em;
+.float-right {
+  float: right;
+}
 
-  margin: -.5em;
+.text-right {
+  text-align: right;
+}
+
+.logo {
+  display: block;
+  padding: .5em;
+
+  &::before {
+    content: '';
+    display: block;
+  }
+}
+
+.logo {
+  $size: 3em;
+  width: $size;
+  height: $size;
+  margin: 0 -$size/5;
+
+  &::before {
+    width: $size;
+    height: $size;
+  }
+}
+
+.logo-lg {
+  $size: 5em;
+  width: $size;
+  height: $size;
+  margin: 0 -$size/5;
+
+  &::before {
+    width: $size;
+    height: $size;
+  }
+}
+
+.logo-xl {
+  width: 10em;
+  height: 10em;
+  margin: 0 -1em;
+
+  &::before {
+    width: 10em;
+    height: 10em;
+  }
+}
+
+.logo-acm-black::before {
+  background: url('/static/svg/acm-black.svg');
+}
+
+.logo-acm-white::before {
+  background: url('/static/svg/acm-white.svg');
+}
+
+.logo-acm-color::before {
+  background: url('/static/svg/acm-color.svg');
+}
+
+.logo-uncc-black::before {
+  background: url('/static/svg/uncc-black.svg');
+}
+
+.logo-uncc-white::before {
+  background: url('/static/svg/uncc-white.svg');
+}
+
+.logo-uncc-color::before {
+  background: url('/static/svg/uncc-color.svg');
 }
