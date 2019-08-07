@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Mono:400,700|Roboto+Slab:300,700&display=swap');
+@import "color";
+
+* {
+  margin: 0;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    flex-grow: 1;
+
+    margin: 1rem 0;
+  }
+}
+
+@mixin elevate($h: .75rem, $a: .4) {
+  box-shadow: rgba(0, 0, 0, $a) 0 0 $h;
+}
+
+@mixin elevate-light($h: .75rem) {
+  @include elevate($h, .1);
+}
+
+@mixin card($h: .75rem, $a: .4) {
+  @include elevate($h, $a);
+}
+
+.container {
+  max-width: 88ch;
+  margin: 0 auto;
+}
+
+.mute {
+  opacity: .5;
+}
+
+.logo {
+  height: 10rem;
+  float: right;
+}
+
+header, footer {
+  @include elevate;
+
+  background: $green;
+  color: $white;
+
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+header {
+  nav {
+    display: flex;
+    align-items: center;
+
+    a {
+      padding: 1.5rem .5rem;
+      font-size: larger;
+      text-decoration: none;
+      color: $white;
+    }
+
+    a:hover {
+      background-color: #0002;
+    }
+
+    .brand {
+      padding: 0;
+
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 3rem;
+      }
+
+      &:hover {
+        background: none;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 1rem 0;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+
+
+    section {
+      display: flex;
+      flex-direction: column;
+      margin-right: 2rem;
+
+      * {
+        padding: 0 .5rem;
+      }
+
+      h1, h2, h3 {
+        width: 100%;
+        border-bottom: 1px solid white;
+        margin-bottom: .5rem;
+      }
+
+      a, span {
+        opacity: .7;
+        color: $white;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: $white;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6, .lead {
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 2rem;
+  text-shadow: #0003 0 0 .5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  text-shadow: #0002 0 0 .4rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  text-shadow: #0001 0 0 .3rem;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, blockquote, pre {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 1rem 0;
+
+  h1, h2, h3, h4, h5, h6,
+  p, ul, ol, blockquote, pre, hr {
+    margin-bottom: 1.1rem;
+  }
+
+  .lead {
+    margin-top: -1rem;
+    font-size: larger;
+  }
+
+  hr {
+    opacity: .6;
+    width: 110%;
+    margin-left: -5%;
+  }
+}
+
+.content {
+  line-height: 1.5em;
+
+  a {
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: 700;
+
+    color: $green;
+
+    &:hover {
+      color: $gold;
+    }
+  }
+}
+
+samp, code {
+  padding: 0 .2em;
+
+  border: 1px solid $stone-gray;
+
+  background: rgba($stone-gray, .05);
+
+  font-family: 'Roboto Mono', monospace;
+
+  .kw {
+    font-weight: 700;
+    color: $green;
+  }
+
+  .kwl {
+    font-weight: 700;
+    color: $gold;
+  }
+
+  .com {
+    color: $stone-gray;
+    font-style: italic;
+  }
+}
+
+pre {
+  samp, code {
+    @include elevate-light(.5em);
+
+    display: block;
+    padding: .5em;
+  }
+}
+
+#events ul {
+  @include card;
+
+  list-style-type: none;
+
+  li {
+    padding: 1rem;
+    border-top: 1px solid #0002;
+
+    &:first-child {
+      border: none;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .loc {
+      font-weight: 700;
+    }
+
+    .description {
+      margin-top: 1rem;
+    }
+  }
+}
+
+#media ul {
+  @include card;
+  background: $green;
+
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  a {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: $white;
+    display: flex;
+
+    &:hover {
+      background-color: #0002;
+      text-decoration: underline;
+    }
+  }
+
+  > *:first-child {
+    margin-left: auto;
+  }
+
+  > *:last-child {
+    margin-right: auto;
+  }
+}
+
+.uncc-icon {
+  height: 5em;
+
+  margin: -.5em;
+}

@@ -1,0 +1,87 @@
+{% extends 'article.html' %}
+
+{% block article %}
+    <main>
+        <section id="intro">
+            <h1>Association for Computing Machinery</h1>
+            <p class="lead">Student Chapter at the University of North Carolina at
+                Charlotte</p>
+
+            <p>The local student chapter of a worldwide organization for computing
+                professionals, delivering resources that advance computing as a
+                science and a profession, enable professional development, and promote
+                policies and research that benefit society.</p>
+
+            <p>One of our main focuses is on the logical methods used to solve
+                interesting computer science problems.</p>
+
+            <p>We also work on developing the website for the club using <a
+                    href="https://www.python.org/">Python 3</a>.</p>
+
+            <p>We hold additional workshops on development methodologies and programming
+                languages which you typically don't encounter in the classroom.</p>
+        </section>
+
+        <section id="media">
+            <ul>
+                <li>
+                    <a href="https://discord.gg/JqrPUEn">
+                        <i class="fab fa-discord fa-4x"></i>
+                        <span>Discord</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/AcmUncc">
+                        <i class="fab fa-twitter fa-4x"></i>
+                        <span>Twitter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/uncc-acm">
+                        <i class="fab fa-github fa-4x"></i>
+                        <span>Github</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ninerengage.uncc.edu/organization/association-for-computing-machinery">
+                        <img src="{{ url_for('static', path='svg/uncc-white.svg') }}"
+                             alt="Niner Engage"
+                             class="uncc-icon">
+                        <span>Niner Engage</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="events">
+            <h1>Upcoming Events</h1>
+
+            <ul>
+                {% for event in event_list %}
+                    <li>
+                        <h2>{{ event.summary }}</h2>
+
+                        <h3>
+                            {% if event.location %}
+                                <span class="loc">{{ event.location }}</span>
+                            {% endif %}
+                            {% if event.start.time %}
+                                <span class="time">{{ event.start.strftime('%I:%M %p') }}</span>
+                            {% endif %}
+                        </h3>
+
+                        <h3>
+                            <span class="day">{{ event.start.strftime('%a') }}</span>
+                            <span class="month">{{ event.start.strftime('%b') }}</span>
+                            <span class="date">{{ event.start.strftime('%d') }}</span>
+                        </h3>
+
+                        {% if event.description %}
+                            <p class="description">{{ event.description }}</p>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+{% endblock %}

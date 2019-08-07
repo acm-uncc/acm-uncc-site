@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <nav>
+        <a href="" class="brand">
+            <img src="{{ url_for('static', path='svg/uncc-white.svg') }}"
+                 alt="UNCC">
+            <img src="{{ url_for('static', path='svg/acm-white.svg') }}"
+                 alt="ACM">
+        </a>
+
+        <span class="spacer"></span>
+
+        <a href="/">Home</a>
+        <a href="https://calendar.google.com/calendar?cid=dW5jYy5lZHVfdm9hdGdmcDVqbzhkaGVzNHFsbXF0bjMxYzRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">
+            Calendar</a>
+    </nav>
+{% endblock %}
+
+{% block body %}
+    <img src="{{ url_for('static', path='svg/acm-color.svg') }}"
+         alt="UNCC ACM"
+         class="logo">
+
+    {% block article %}
+    {% endblock %}
+{% endblock %}
+
+{% block footer %}
+    <section>
+        <h2>Related Pages</h2>
+        <a href="https://www.acm.org/">Association for Computing Machinery</a>
+        <a href="https://open.kattis.com/">Kattis</a>
+        <a href="https://icpc.baylor.edu/">ICPC</a>
+        <a href="https://codingcompetitions.withgoogle.com/codejam">Google Code Jam</a>
+    </section>
+
+    <section>
+        <h2>Contact Us</h2>
+    </section>
+{% endblock %}

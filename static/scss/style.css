@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Mono:400,700|Roboto+Slab:300,700&display=swap");
+/* primary */
+/* supporting */
+/* callouts */
+/* screens */
+* {
+  margin: 0;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+body .content {
+  flex-grow: 1;
+  margin: 1rem 0;
+}
+
+.container {
+  max-width: 88ch;
+  margin: 0 auto;
+}
+
+.mute {
+  opacity: 0.5;
+}
+
+.logo {
+  height: 10rem;
+  float: right;
+}
+
+header, footer {
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 0.75rem;
+  background: #00703C;
+  color: #ffffff;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav a {
+  padding: 1.5rem 0.5rem;
+  font-size: larger;
+  text-decoration: none;
+  color: #ffffff;
+}
+header nav a:hover {
+  background-color: #0002;
+}
+header nav .brand {
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+header nav .brand img {
+  height: 3rem;
+}
+header nav .brand:hover {
+  background: none;
+}
+
+footer {
+  padding: 1rem 0;
+}
+footer .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+footer .container section {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+}
+footer .container section * {
+  padding: 0 0.5rem;
+}
+footer .container section h1, footer .container section h2, footer .container section h3 {
+  width: 100%;
+  border-bottom: 1px solid white;
+  margin-bottom: 0.5rem;
+}
+footer .container section a, footer .container section span {
+  opacity: 0.7;
+  color: #ffffff;
+  text-decoration: none;
+}
+footer .container section a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+  opacity: 1;
+}
+
+h1, h2, h3, h4, h5, h6, .lead {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 2rem;
+  text-shadow: #0003 0 0 0.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  text-shadow: #0002 0 0 0.4rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  text-shadow: #0001 0 0 0.3rem;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, blockquote, pre {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 1rem 0;
+}
+main h1, main h2, main h3, main h4, main h5, main h6,
+main p, main ul, main ol, main blockquote, main pre, main hr {
+  margin-bottom: 1.1rem;
+}
+main .lead {
+  margin-top: -1rem;
+  font-size: larger;
+}
+main hr {
+  opacity: 0.6;
+  width: 110%;
+  margin-left: -5%;
+}
+
+.content {
+  line-height: 1.5em;
+}
+.content a {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 700;
+  color: #00703C;
+}
+.content a:hover {
+  color: #b3a369;
+}
+
+samp, code {
+  padding: 0 0.2em;
+  border: 1px solid #717c7d;
+  background: rgba(113, 124, 125, 0.05);
+  font-family: "Roboto Mono", monospace;
+}
+samp .kw, code .kw {
+  font-weight: 700;
+  color: #00703C;
+}
+samp .kwl, code .kwl {
+  font-weight: 700;
+  color: #b3a369;
+}
+samp .com, code .com {
+  color: #717c7d;
+  font-style: italic;
+}
+
+pre samp, pre code {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.5em;
+  display: block;
+  padding: 0.5em;
+}
+
+#events ul {
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 0.75rem;
+  list-style-type: none;
+}
+#events ul li {
+  padding: 1rem;
+  border-top: 1px solid #0002;
+}
+#events ul li:first-child {
+  border: none;
+}
+#events ul li * {
+  padding: 0;
+  margin: 0;
+}
+#events ul li .loc {
+  font-weight: 700;
+}
+#events ul li .description {
+  margin-top: 1rem;
+}
+
+#media ul {
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 0.75rem;
+  background: #00703C;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#media ul a {
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+}
+#media ul a:hover {
+  background-color: #0002;
+  text-decoration: underline;
+}
+#media ul > *:first-child {
+  margin-left: auto;
+}
+#media ul > *:last-child {
+  margin-right: auto;
+}
+
+.uncc-icon {
+  height: 5em;
+  margin: -0.5em;
+}
+
+/*# sourceMappingURL=style.css.map */
