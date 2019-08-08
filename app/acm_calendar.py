@@ -1,14 +1,18 @@
 import datetime
+import json
+import os
 
 import dateutil.parser
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
+INFO = json.loads(os.environ['GOOGLE_CLOUD_CREDS'])
 SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
-SERVICE_ACCOUNT_FILE = 'credentials.json'
 
-credentials = service_account.Credentials.from_service_account_file(
-    SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+credentials = service_account.Credentials.from_service_account_info(
+    info=INFO,
+    scopes=SCOPES
+)
 
 calendar_service = build('calendar', 'v3', credentials=credentials)
 
