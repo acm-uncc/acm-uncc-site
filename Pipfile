@@ -6,13 +6,13 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-fastapi = {extras = ["all"],version = "*"}
+starlette = {extras = ["full"],version = "*"}
 pymongo = "*"
 python-dateutil = "*"
 google-api-python-client = "*"
 google-auth-httplib2 = "*"
 google-auth-oauthlib = "*"
-
+uvicorn = "*"
 
 [requires]
 python_version = "3.7"

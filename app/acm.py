@@ -1,19 +1,18 @@
-from fastapi import FastAPI
+from starlette.applications import Starlette
 from starlette.requests import Request
 from starlette.staticfiles import StaticFiles
-from starlette.responses import HTMLResponse
 from starlette.templating import Jinja2Templates
 
 from .acm_calendar import get_events
 
-app = FastAPI()
+app = Starlette()
 
 templates = Jinja2Templates(directory='templates')
 static = StaticFiles(directory='static')
 app.mount('/static', static, name='static')
 
 
-@app.get('/')
+@app.route('/', methods=['get'])
 async def index(request: Request):
     events = get_events(3)
     return templates.TemplateResponse('index.html', {

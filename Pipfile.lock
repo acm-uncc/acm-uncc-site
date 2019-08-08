@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e543a516fadfb413b2d62f839d45f25e38358e08264cec4811c8fe09b136be87"
+            "sha256": "2705a9e59f1ed896462370944f1b6dee1ea6ce47c551b5a72e034a6f768110c9"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -57,30 +57,6 @@
                 "sha256:5b94b49521f6456670fdb30cd82a4eca9412788a93fa6dd6df72c94d5a8ff2d7"
             ],
             "version": "==7.0"
-        },
-        "dnspython": {
-            "hashes": [
-                "sha256:36c5e8e38d4369a08b6780b7f27d790a292b2b08eea01607865bf0936c558e01",
-                "sha256:f69c21288a962f4da86e56c4905b49d11aba7938d3d740e80d9e366ee4f1632d"
-            ],
-            "version": "==1.16.0"
-        },
-        "email-validator": {
-            "hashes": [
-                "sha256:79966e318d6d68fed359c90f8f19d242bcc178b724011f1c07145bd093da6cc7"
-            ],
-            "version": "==1.0.4"
-        },
-        "fastapi": {
-            "extras": [
-                "all"
-            ],
-            "hashes": [
-                "sha256:1ade22580c712d04ca3c2d934249fe8c9760b678629d98da4ea680e85a6f128a",
-                "sha256:83f5a5256446cdb5e1beb6871de1f611fb2b1ea9db067a6ed16ea96ff410d565"
-            ],
-            "index": "pypi",
-            "version": "==0.34.0"
         },
         "google-api-python-client": {
             "hashes": [
@@ -231,17 +207,6 @@
             ],
             "version": "==0.2.6"
         },
-        "pydantic": {
-            "hashes": [
-                "sha256:0b7998c6e4106e57317a511a17ec8b3c99a20f037daa9687e2cffb48f20e36d3",
-                "sha256:239a05529f01ff096e0b4b3ae8b0fd891dc1571ddca6fe4c013ed1c46646d8bf",
-                "sha256:2408cbfd8aadf61a5a8062734615dc5f54bc01fcb37ad476260d0c8288915607",
-                "sha256:427c0935683913a45ee5225ce4cd2ebbde376b7b06d4287f7f6c6d3158ef0408",
-                "sha256:5b8900778c30e55ee418f6a375b922873d806232021ac0be13d0123fd922557b",
-                "sha256:cb4351bae00636b59cdaafe75013955c3002f842878b93625f7a68202c8d218a"
-            ],
-            "version": "==0.30"
-        },
         "pymongo": {
             "hashes": [
                 "sha256:32421df60d06f479d71b6b539642e410ece3006e8910688e68df962c8eb40a21",
@@ -344,9 +309,13 @@
             "version": "==1.12.0"
         },
         "starlette": {
+            "extras": [
+                "full"
+            ],
             "hashes": [
                 "sha256:849553e6dc8dd4faac5d4383219bdf49b199f3f09d60ce374c2a00a42ab7c77d"
             ],
+            "index": "pypi",
             "version": "==0.12.7"
         },
         "ujson": {
@@ -374,6 +343,7 @@
             "hashes": [
                 "sha256:8aa44f9d9c3082ef693950387ea25d376e32944df6d4071dbd8edc3c25a40c74"
             ],
+            "index": "pypi",
             "version": "==0.8.6"
         },
         "websockets": {
