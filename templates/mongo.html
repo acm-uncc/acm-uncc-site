@@ -1,0 +1,15 @@
+{% extends 'article.html' %}
+
+{% block article %}
+    <main>
+        <ul>
+            {% for time in times %}
+                <li>{{ time.t }}</li>
+            {% endfor %}
+        </ul>
+
+        <form action="add" method="post">
+            <input type="submit" value="Add Now">
+        </form>
+    </main>
+{% endblock %}

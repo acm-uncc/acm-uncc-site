@@ -7,4 +7,4 @@ WORKDIR /app
 ADD . /app
 RUN pipenv install
 
-CMD pipenv run python -m app
+CMD pipenv run uvicorn app.acm:app --host 0.0.0.0 --port $PORT --proxy-headers

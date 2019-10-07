@@ -1,0 +1,21 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+    environment:
+      PORT: 8080
+      MONGODB_URI: mongodb://db
+    env_file:
+      - google.creds.env
+    volumes:
+      - venv:/root/.local/share/virtualenvs
+  db:
+    image: 'mongo'
+    ports:
+      - 27017
+volumes:
+  venv:
