@@ -1,0 +1,27 @@
+{
+  "addons": [
+    "mongolab"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "env": {
+    "GOOGLE_CLOUD_CREDS": {
+      "required": true
+    },
+    "MONGODB_URI": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "name": "acm-uncc-site",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}
