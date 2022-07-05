@@ -32,7 +32,7 @@ rsa==4.0
 rx==1.6.1
 six==1.12.0
 starlette[full]==0.12.7
-ujson==1.35
+ujson==5.4.0
 uritemplate==3.0.0
 urllib3==1.25.3
 uvicorn==0.8.6
